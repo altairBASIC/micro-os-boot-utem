@@ -77,9 +77,9 @@ Esta decisión **no es una desviación del enunciado, sino su consecuencia lógi
 
 El uso de una tabla de descriptores recorrida por un único bucle, en lugar de repetir el bloque de impresión por cada línea, es una optimización deliberada de tamaño: reduce el código de la etapa 2 y mantiene el contenido fácilmente editable.
 
-### 4.3 Banner institucional
+### 4.3 Emblema institucional
 
-El banner "UTEM" se construye con el carácter de bloque sólido CP437 `0xDB`, que el hardware VGA renderiza como un rectángulo lleno. Cada letra se diseñó en una rejilla 5×5 y los bytes se generaron de forma controlada para garantizar la alineación exacta de columnas en pantalla.
+El emblema es el **escudo oficial de la UTEM rasterizado** desde el logo institucional. El logo se recortó (solo el escudo, sin el texto), se redujo a una grilla y se clasificó cada píxel en tres categorías (vacío, azul institucional, verde). Para aproximar el contorno curvo del blasón se emplearon los caracteres de **medio bloque** de CP437 (`0xDF` mitad superior, `0xDC` mitad inferior, `0xDB` bloque completo), que duplican la resolución vertical efectiva del modo texto. Cada celda del escudo almacena su propio par `[carácter][atributo de color]`, lo que exige un segundo motor de render que recorre pares carácter/atributo, distinto del motor de cadenas monocolor usado para el texto. El cuadro verde característico del logo se conserva en su posición mediante el atributo de color por celda. Junto al escudo se imprime el texto "UTEM", el curso, la carrera, los integrantes y las líneas explicativas técnicas.
 
 ---
 
@@ -100,7 +100,7 @@ La salida de `od -A x -t x1 -j 0x1FE -N 2 build/disk.img` confirma los bytes `55
 
 ![Ejecución del bootloader en QEMU](capturas/qemu-boot.png)
 
-*Figura 1: pantalla institucional renderizada por la etapa 2 en QEMU. Se observa el banner UTEM en verde, la identificación del curso INFB6074, las cinco líneas explicativas sobre CPU, memoria, bootloader, VGA y SO, y el mensaje de arranque exitoso.*
+*Figura 1: pantalla institucional renderizada por la etapa 2 en QEMU. Se observa el escudo UTEM rasterizado del logo oficial (con su contorno de blasón y el cuadro verde), el texto "UTEM", la identificación del curso INFB6074, la carrera, los integrantes del grupo y las líneas explicativas sobre CPU, memoria, arranque en dos etapas y escritura directa a memoria de video.*
 
 La pantalla aparece limpia y el contenido se dibuja con los colores institucionales (verde, azul, blanco, cian, amarillo). El cursor queda estático tras el último mensaje, confirmando que la CPU entró en el *halt loop*.
 
