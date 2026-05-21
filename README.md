@@ -1,4 +1,4 @@
-# Ejercicio 1 — Mini sistema operativo booteable en ensamblador y QEMU
+# Ejercicio 1 - Mini sistema operativo booteable en ensamblador y QEMU
 
 Bootloader **de dos etapas** en ensamblador x86 (modo real, 16 bits) que arranca en QEMU y dibuja una pantalla institucional UTEM escribiendo **directamente al framebuffer de texto VGA (`0xB8000`)**. Desarrollado para la **Evaluación Integradora 1** de la asignatura *Infraestructura para Ciencia de Datos* (INFB6074) de la UTEM.
 
@@ -11,7 +11,7 @@ Bootloader **de dos etapas** en ensamblador x86 (modo real, 16 bits) que arranca
 | Universidad | Universidad Tecnológica Metropolitana (UTEM)                            |
 | Carrera     | Ingeniería Civil en Ciencia de Datos                                    |
 | Asignatura  | Infraestructura para Ciencia de Datos (**INFB6074**)                     |
-| Evaluación  | Evaluación Integradora 1 — Ejercicio 1                                   |
+| Evaluación  | Evaluación Integradora 1 - Ejercicio 1                                   |
 | Semestre    | Primer Semestre 2026                                                     |
 | Profesor    | Dr. Ing. Michael Miranda Sandoval                                        |
 | Integrantes | Ignacio Ramírez ([@altairBASIC](https://github.com/altairBASIC))<br>Cristian Vergara ([@Cristian-Vergara](https://github.com/Cristian-Vergara))<br>Francisco Provoste ([@fprovoste0](https://github.com/fprovoste0)) |
